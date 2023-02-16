@@ -1,13 +1,42 @@
-# vite-plugin-rate-limiter
+# 🚰 vite-plugin-rate-limiter
 
 [![npm version](https://badgen.net/npm/v/vite-plugin-rate-limiter)](https://npm.im/vite-plugin-rate-limiter) [![npm downloads](https://badgen.net/npm/dm/vite-plugin-rate-limiter)](https://npm.im/vite-plugin-rate-limiter)
 
-## Using this template
+A vite plugin to limit the speed of specific files from ViteDevServer to your browser in development mode.
 
-- Search `vite-plugin-rate-limiter` and replace it with your package name.
-- Search `ArcherGu` and replace it with your name.
-- After `pnpm install`, please run `npx simple-git-hooks` to install git hooks.
-- If you want to auto publish to npm, please cancel the comment of `release` job in `.github/workflows/ci.yml`.
+## Install
+
+```bash
+# npm
+npm i vite-plugin-rate-limiter -D
+
+# yarn
+yarn add vite-plugin-rate-limiter -D
+
+# pnpm
+pnpm add vite-plugin-rate-limiter -D
+```
+
+## Usage
+
+```ts
+// vite.config.ts
+import { defineConfig } from 'vite'
+import { ViteRateLimiter } from 'vite-plugin-rate-limiter'
+
+export default defineConfig({
+  plugins: [
+    ViteRateLimiter({
+      rate: 100, // 100 kb/s
+      matchOpts: '**/*.glb'
+    }),
+  ]
+})
+```
+
+## Why?
+
+Sometimes we need to simulate poor network environments, but damn local development server is so fast, now you can limit the speed of specific files to your browser in development mode with this plugin. 🐢 
 
 ## License
 
