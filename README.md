@@ -1,10 +1,10 @@
-# archergu-ts-lib
+# vite-plugin-rate-limiter
 
-[![npm version](https://badgen.net/npm/v/archergu-ts-lib)](https://npm.im/archergu-ts-lib) [![npm downloads](https://badgen.net/npm/dm/archergu-ts-lib)](https://npm.im/archergu-ts-lib)
+[![npm version](https://badgen.net/npm/v/vite-plugin-rate-limiter)](https://npm.im/vite-plugin-rate-limiter) [![npm downloads](https://badgen.net/npm/dm/vite-plugin-rate-limiter)](https://npm.im/vite-plugin-rate-limiter)
 
 ## Using this template
 
-- Search `archergu-ts-lib` and replace it with your package name.
+- Search `vite-plugin-rate-limiter` and replace it with your package name.
 - Search `ArcherGu` and replace it with your name.
 - After `pnpm install`, please run `npx simple-git-hooks` to install git hooks.
 - If you want to auto publish to npm, please cancel the comment of `release` job in `.github/workflows/ci.yml`.
