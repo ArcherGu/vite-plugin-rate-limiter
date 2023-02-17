@@ -21,7 +21,7 @@ class ResWriteable extends Writable {
   }
 }
 
-type ServerMiddlewaresUseFn = (req: any, res: Writable, next: (v?: unknown) => void) => void
+type ServerMiddlewaresUseFn = (req: { url: string }, res: Writable, next: () => void) => void
 
 // mock server
 const server = {
