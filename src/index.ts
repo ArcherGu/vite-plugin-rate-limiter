@@ -78,7 +78,7 @@ export function ViteRateLimiter(options: ViteRateLimiterOptions): Plugin {
         }
 
         if (throttle) {
-          const { end, write, on } = res
+          const { end: resEnd, write: resWrite, on: resOn } = res
 
           // replace write and end
           res.write = function (...args: any[]) {
@@ -87,16 +87,28 @@ export function ViteRateLimiter(options: ViteRateLimiterOptions): Plugin {
           res.end = function (...args: any[]) {
             return throttle!.end.apply(throttle, args as any)
           }
+
+          // end
           throttle.on('end', () => {
-            return end.call(res)
+            return resEnd.call(res)
           })
 
           // backpressure
           throttle.on(
             'data',
-            chunk => write.call(res, chunk) === false && throttle!.pause(),
+            chunk => resWrite.call(res, chunk) === false && throttle!.pause(),
           )
-          on.call(res, 'drain', () => throttle!.resume())
+          resOn.call(res, 'drain', () => throttle!.resume())
+
+          res.on = function (type, listener) {
+            if (type !== 'drain')
+              resOn.call(this, type, listener)
+
+            else
+              throttle!.on(type, listener)
+
+            return this
+          }
         }
 
         next()
