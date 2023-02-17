@@ -46,7 +46,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Build and Test
-        run: pnpm build # && pnpm test
+        run: pnpm build && pnpm test
 
   release:
     runs-on: ubuntu-latest

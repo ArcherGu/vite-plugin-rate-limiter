@@ -38,7 +38,6 @@ export function ViteRateLimiter(options: ViteRateLimiterOptions): Plugin {
   if (!defaultRate || defaultRate <= 0 || matchOpts.length === 0) {
     return {
       name: 'vite-rate-limiter',
-      configureServer() { },
     }
   }
 
