@@ -1,14 +1,16 @@
-import { Writable } from 'stream'
-import fs from 'fs'
-import path from 'path'
+import { Writable } from 'node:stream'
+import fs from 'node:fs'
+import path from 'node:path'
 import { describe, expect, it } from 'vitest'
 import { ViteRateLimiter } from '../src'
 
 // to save promise resolve function
 let waitResolve: Function
-const wait = () => new Promise((resolve) => {
-  waitResolve = resolve
-})
+function wait() {
+  return new Promise((resolve) => {
+    waitResolve = resolve
+  })
+}
 
 // mock writeable stream: res
 class ResWriteable extends Writable {
