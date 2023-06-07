@@ -36,7 +36,7 @@
     "@lightwing/eslint-config": "^0.0.16",
     "@types/node": "^18.15.11",
     "@types/stream-throttle": "^0.1.1",
-    "conventional-changelog-cli": "^2.2.2",
+    "conventional-changelog-cli": "^3.0.0",
     "eslint": "^8.38.0",
     "lint-staged": "^13.2.1",
     "simple-git-hooks": "^2.8.1",
