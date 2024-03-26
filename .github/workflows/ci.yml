@@ -51,14 +51,21 @@ jobs:
         run: pnpm build && pnpm test
 
   release:
-    runs-on: ubuntu-latest
-    needs: [test]
     if: '!contains(github.event.head_commit.message, ''skip-release'') && !contains(github.event.head_commit.message, ''skip-ci'') && github.event_name != ''pull_request'''
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [20.x]
+
+    runs-on: ${{ matrix.os }}
+    needs: [test]
+
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version: ${{ matrix.node-version }}
 
       - name: Cache pnpm store
         uses: actions/cache@v4
