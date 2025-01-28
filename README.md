@@ -36,7 +36,7 @@ export default defineConfig({
 
 ## Why?
 
-Sometimes we need to simulate poor network environments, but damn local development server is so fast, now you can limit the speed of specific files to your browser in development mode with this plugin. 🐢 
+Sometimes we need to simulate poor network environments, but damn local development server is so fast, now you can limit the speed of specific files to your browser in development mode with this plugin. 🐢
 
 ## License
 

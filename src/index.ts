@@ -1,5 +1,5 @@
-import { Throttle } from 'stream-throttle'
 import type { Plugin } from 'vite'
+import { Throttle } from 'stream-throttle'
 import { createFilter } from 'vite'
 
 export interface MatchOptions {

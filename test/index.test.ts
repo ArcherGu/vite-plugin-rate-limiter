@@ -1,11 +1,11 @@
-import { Writable } from 'node:stream'
 import fs from 'node:fs'
 import path from 'node:path'
+import { Writable } from 'node:stream'
 import { describe, expect, it } from 'vitest'
 import { ViteRateLimiter } from '../src'
 
 // to save promise resolve function
-let waitResolve: Function
+let waitResolve: (value?: any) => void
 function wait() {
   return new Promise((resolve) => {
     waitResolve = resolve
@@ -14,7 +14,7 @@ function wait() {
 
 // mock writeable stream: res
 class ResWriteable extends Writable {
-  _write(chunk: any, encoding: string, callback: Function) {
+  _write(chunk: any, encoding: string, callback: () => void) {
     callback()
   }
 
