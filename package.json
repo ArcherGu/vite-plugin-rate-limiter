@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-rate-limiter",
   "version": "0.0.0",
-  "packageManager": "pnpm@10.2.0",
+  "packageManager": "pnpm@10.2.1",
   "description": "Limit the response rate of ViteDevServer",
   "author": "ArcherGu",
   "license": "MIT",
