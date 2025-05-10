@@ -38,7 +38,7 @@
     "@types/stream-throttle": "^0.1.4",
     "conventional-changelog-cli": "^5.0.0",
     "eslint": "^9.20.1",
-    "lint-staged": "^15.4.3",
+    "lint-staged": "^16.0.0",
     "simple-git-hooks": "^2.11.1",
     "tsup": "^8.3.6",
     "typescript": "^5.7.3",
