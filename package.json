@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@lightwing/eslint-config": "^1.0.104",
-    "@types/node": "^22.13.2",
+    "@types/node": "^24.0.0",
     "@types/stream-throttle": "^0.1.4",
     "conventional-changelog-cli": "^5.0.0",
     "eslint": "^9.20.1",
