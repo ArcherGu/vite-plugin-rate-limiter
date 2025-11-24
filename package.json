@@ -24,8 +24,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "vitest run",
-    "prepublishOnly": "npm run build",
-    "postinstall": "npx simple-git-hooks"
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "vite": ">=2.0.0"
