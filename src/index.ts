@@ -59,7 +59,7 @@ export function ViteRateLimiter(options: ViteRateLimiterOptions): Plugin {
   for (const rate in matchRecords) {
     limiterSettings.push({
       rate: Number(rate),
-      filter: createFilter(Array.from(matchRecords[Number(rate)])),
+      filter: createFilter([...matchRecords[Number(rate)]]),
     })
   }
   limiterSettings.sort((a, b) => a.rate - b.rate)
