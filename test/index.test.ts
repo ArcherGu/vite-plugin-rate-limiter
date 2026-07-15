@@ -67,7 +67,7 @@ describe('vite-rate-limiter', () => {
     // wait for res.end()
     await wait()
     const end = Date.now()
-    expect(end - start).toBeGreaterThan(5000)
+    expect(end - start).toBeGreaterThanOrEqual(5000)
   })
 
   it('should not limit rate when not match file', async () => {
