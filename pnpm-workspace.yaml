@@ -16,5 +16,5 @@ minimumReleaseAgeExclude:
   - nanoid@3.3.18
 
 overrides:
-  '@conventional-changelog/git-client@<2.0.0': ^2.0.0
+  '@conventional-changelog/git-client@<2.0.0': ^3.0.0
   nanoid@<3.3.18: ^3.3.18
