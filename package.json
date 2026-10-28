@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "@lightwing/eslint-config": "^1.0.158",
-    "@types/node": "^25.9.5",
+    "@types/node": "^26.0.0",
     "@types/stream-throttle": "^0.1.4",
     "@typescript/native": "npm:typescript@7.0.2",
     "conventional-changelog-cli": "^5.0.0",
